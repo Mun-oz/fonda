@@ -1,5 +1,6 @@
 package cl.dsy1104.fonda.model;
 
-public class TipoBebida {
-
+public enum TipoBebida {
+    ALCOHOLICA,
+    SIN_ALCOHOL
 }
