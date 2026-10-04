@@ -33,7 +33,7 @@ public class Bebida {
 
     private Double gradosAlcohol;
     private Boolean certificada;
-    private Interger azucarPorLitro;
+    private Integer azucarPorLitro;
 
     @Column(nullable = false)
     private boolean ventaRestringida;
