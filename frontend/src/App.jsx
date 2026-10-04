@@ -1,4 +1,5 @@
 import { Container } from "react-bootstrap";
+import BebidaList from "./components/BebidaList";
 
 /**
  * Estructura sugerida de la interfaz. Cada bloque es un componente propio
@@ -17,9 +18,11 @@ export default function App() {
     <Container className="py-4">
       <h1 className="mb-1">Fonda San Belarmino</h1>
       <p className="text-muted">Control de bebidas y ventas</p>
-
       {/* TODO: montar aqui los componentes de la interfaz. */}
       <p>Frontend pendiente. Revisa el enunciado en README.md.</p>
+
+      <BebidaList />
+      
     </Container>
   );
 }
