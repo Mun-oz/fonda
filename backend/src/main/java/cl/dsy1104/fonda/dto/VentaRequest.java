@@ -2,13 +2,7 @@ package cl.dsy1104.fonda.dto;
 
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotNull;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
 
-@Data
-@NoArgsConstructor
-@AllArgsConstructor
 public class VentaRequest {
     
     @NotNull(message = "El id de la bebida es obligatorio")
@@ -16,4 +10,11 @@ public class VentaRequest {
 
     @Min(value = 1, message = "Las unidades deben ser al menos 1")
     private int unidades;
+
+    public VentaRequest() {}
+
+    public Long getBebidaId() { return bebidaId; }
+    public void setBebidaId(Long bebidaId) { this.bebidaId = bebidaId; }
+    public int getUnidades() { return unidades; }
+    public void setUnidades(int unidades) { this.unidades = unidades; }
 }

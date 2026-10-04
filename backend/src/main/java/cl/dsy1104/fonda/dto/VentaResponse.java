@@ -1,14 +1,8 @@
 package cl.dsy1104.fonda.dto;
 
 import cl.dsy1104.fonda.model.EstadoVenta;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
 import java.time.LocalDateTime;
 
-@Data
-@NoArgsConstructor
-@AllArgsConstructor
 public class VentaResponse {
     private Long id;
     private Long bebidaId;
@@ -18,4 +12,34 @@ public class VentaResponse {
     private EstadoVenta estado;
     private String motivo;
     private LocalDateTime fecha;
+
+    public VentaResponse() {}
+
+    public VentaResponse(Long id, Long bebidaId, String nombre, int unidades, int total, EstadoVenta estado, String motivo, LocalDateTime fecha) {
+        this.id = id;
+        this.bebidaId = bebidaId;
+        this.nombre = nombre;
+        this.unidades = unidades;
+        this.total = total;
+        this.estado = estado;
+        this.motivo = motivo;
+        this.fecha = fecha;
+    }
+
+    public Long getId() { return id; }
+    public void setId(Long id) { this.id = id; }
+    public Long getBebidaId() { return bebidaId; }
+    public void setBebidaId(Long bebidaId) { this.bebidaId = bebidaId; }
+    public String getNombre() { return nombre; }
+    public void setNombre(String nombre) { this.nombre = nombre; }
+    public int getUnidades() { return unidades; }
+    public void setUnidades(int unidades) { this.unidades = unidades; }
+    public int getTotal() { return total; }
+    public void setTotal(int total) { this.total = total; }
+    public EstadoVenta getEstado() { return estado; }
+    public void setEstado(EstadoVenta estado) { this.estado = estado; }
+    public String getMotivo() { return motivo; }
+    public void setMotivo(String motivo) { this.motivo = motivo; }
+    public LocalDateTime getFecha() { return fecha; }
+    public void setFecha(LocalDateTime fecha) { this.fecha = fecha; }
 }

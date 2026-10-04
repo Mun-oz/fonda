@@ -1,14 +1,8 @@
 package cl.dsy1104.fonda.dto;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
 import java.util.Map;
 
-@Data
-@NoArgsConstructor
-@AllArgsConstructor
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class ErrorResponse {
     
@@ -27,4 +21,11 @@ public class ErrorResponse {
         this.error = error;
         this.campos = campos;
     }
+
+    public String getError() { return error; }
+    public void setError(String error) { this.error = error; }
+    public String getMensaje() { return mensaje; }
+    public void setMensaje(String mensaje) { this.mensaje = mensaje; }
+    public Map<String, String> getCampos() { return campos; }
+    public void setCampos(Map<String, String> campos) { this.campos = campos; }
 }
