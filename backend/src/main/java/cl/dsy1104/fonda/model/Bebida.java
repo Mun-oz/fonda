@@ -1,7 +1,5 @@
 package cl.dsy1104.fonda.model;
 
-import java.lang.annotation.Inherited;
-import javax.annotation.processing.Generated;
 import jakarta.persistence.*;
 import lombok.Data;
 import lombok.NoArgsConstructor;
