@@ -1,4 +1,4 @@
-package main.java.cl.dsy1104.fonda.service;
+package cl.dsy1104.fonda.service;
 
 import cl.dsy1104.fonda.dto.BebidaRequest;
 import cl.dsy1104.fonda.dto.BebidaResponse;
