@@ -14,7 +14,7 @@ async function pedir(ruta, opciones = {}) {
     // TODO: leer el cuerpo del error (400 trae los campos, 409 trae el motivo)
     const errorBody = await res.json().catch(() => ({}));
     // y lanzarlo para que el componente pueda mostrarlo.
-    throw new Error(`HTTP ${res.status}`);
+    throw { status: res.status, ...errorBody };
   }
 
   return res.status === 204 ? null : res.json();
